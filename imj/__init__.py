@@ -1,9 +1,9 @@
 import requests
 
-BASE = 'https://i.marcusj.tech'
+BASE = 'https://img.marcusweinberger.repl.co'
 
 class IMJ(object):
-    def __init__(self, img_id, base_url='https://i.marcusj.tech'):
+    def __init__(self, img_id, base_url='https://img.marcusweinberger.repl.co'):
         self.id = img_id
         self.base = base_url
 
