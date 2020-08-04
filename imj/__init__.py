@@ -16,7 +16,7 @@ class IMJ(object):
         return f"{self.base}/image/{self.id}"
     
     def shorten(self):
-        return requests.get(f"{self.url}/shorten/{self.id}").url
+        return requests.get(f"{self.base}/shorten/{self.id}").url
     
 
 def upload_file(fn):
