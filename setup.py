@@ -1,7 +1,7 @@
 import setuptools
 
 setuptools.setup(name="imj",
-    version="1.0.1",
+    version="1.0.2",
     description="Python client for i.marcusj.tech",
     long_description=open('README.md','r').read(),
     long_description_content_type="text/markdown",

@@ -3,20 +3,22 @@ import requests
 BASE = 'https://img.marcusweinberger.repl.co'
 
 class IMJ(object):
-    def __init__(self, img_id, base_url='https://img.marcusweinberger.repl.co'):
+    def __init__(self, img_id, base_url='https://img.marcusweinberger.repl.co',
+    disp_url='https://i.marcusj.tech'):
         self.id = img_id
         self.base = base_url
+        self.disp = disp_url
 
     @property
     def viewer(self):
-        return f"{self.base}/view/{self.id}"
+        return f"{self.disp}/view/{self.id}"
     
     @property
     def url(self):
-        return f"{self.base}/image/{self.id}"
+        return f"{self.disp}/image/{self.id}"
     
     def shorten(self):
-        return requests.get(f"{self.base}/shorten/{self.id}").url
+        return requests.get(f"{self.base}/shorten/{self.id}").url.replace(self.base, self.disp)
     
 
 def upload_file(fn):
