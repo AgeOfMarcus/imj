@@ -1,8 +1,8 @@
 import setuptools
 
 setuptools.setup(name="imj",
-    version="1.0.2",
-    description="Python client for i.marcusj.tech",
+    version="1.1.0",
+    description="Python client for i.marcusj.org",
     long_description=open('README.md','r').read(),
     long_description_content_type="text/markdown",
     url="https://github.com/AgeOfMarcus/imj",
