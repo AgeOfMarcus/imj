@@ -27,7 +27,7 @@ def upload_file(fn: str) -> IMJ:
     r = requests.post(f"{BASE}/upload", files={
         'image': open(fn, 'rb')
     })
-    return IMJ(r.url.split('/')[-1])
+    return IMJ(*(r.url.split('/')[-1].split('&key=')))
 
 def upload(raw: bytes, fn: str='image.png', mimetype: str='image/png') -> IMJ:
     r = requests.post(f"{BASE}/upload", files={
